@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Dashboard - USOTG Sourcing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">USOTG Sourcing</a></div>
+            <div class="nav-links">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="catalog-upload.html">Catalog</a>
+                <a href="#">RFQs</a>
+                <a href="#">Orders</a>
+                <a href="analytics.html">Analytics</a>
+                <a href="profile-edit.html">Profile</a>
+                <a href="help-center.html">Help</a>
+                <a href="index.html">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Welcome back, ABC Textiles Ltd.</h1>
+            <div class="verification-badge amber">
+                <span class="badge-icon">⏳</span>
+                <span>Verification Pending</span>
+            </div>
+        </div>
+
+        <!-- Status Tiles -->
+        <div class="status-grid">
+            <div class="status-card amber">
+                <div class="status-header">
+                    <h3>Verification Status</h3>
+                    <span class="status-badge amber">Pending</span>
+                </div>
+                <p>We're reviewing your documents. Usually takes 12-24 hours.</p>
+                <div class="checklist">
+                    <div class="checklist-item complete">✓ Trade license uploaded</div>
+                    <div class="checklist-item complete">✓ Registry check passed</div>
+                    <div class="checklist-item pending">⏳ Manual review in progress</div>
+                </div>
+                <button class="btn-secondary btn-small">Upload More Documents</button>
+            </div>
+
+            <div class="status-card">
+                <div class="status-header">
+                    <h3>Profile Completeness</h3>
+                    <span class="status-badge">65%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%"></div>
+                </div>
+                <p>Complete your profile to attract more buyers</p>
+                <div class="checklist">
+                    <div class="checklist-item complete">✓ Basic info</div>
+                    <div class="checklist-item complete">✓ Contact details</div>
+                    <div class="checklist-item pending">Add company logo</div>
+                    <div class="checklist-item pending">Add production capacity</div>
+                </div>
+                <button class="btn-primary btn-small">Complete Profile</button>
+            </div>
+
+            <div class="status-card warning">
+                <div class="status-header">
+                    <h3>Catalog Health</h3>
+                    <span class="status-badge warning">Needs Attention</span>
+                </div>
+                <div class="catalog-stats">
+                    <div class="stat">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Published</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Rejected</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Missing Images</div>
+                    </div>
+                </div>
+                <button class="btn-primary btn-small" onclick="window.location.href='catalog-upload.html'">Fix Issues</button>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <h2>Next Steps</h2>
+            <div class="action-cards">
+                <div class="action-card">
+                    <div class="action-icon">📦</div>
+                    <h3>Add More Products</h3>
+                    <p>Upload your full catalog to increase visibility</p>
+                    <button class="btn-primary" onclick="window.location.href='catalog-upload.html'">Upload Catalog</button>
+                </div>
+                <div class="action-card">
+                    <div class="action-icon">🎓</div>
+                    <h3>Watch Quick Tutorial</h3>
+                    <p>2-minute guide to getting your first order</p>
+                    <button class="btn-secondary">Watch Video</button>
+                </div>
+                <div class="action-card">
+                    <div class="action-icon">💬</div>
+                    <h3>Need Help?</h3>
+                    <p>Chat with our onboarding team</p>
+                    <button class="btn-secondary">Start Chat</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="recent-activity">
+            <h2>Recent Activity</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon">✓</div>
+                    <div class="activity-content">
+                        <strong>KYB check completed</strong>
+                        <span class="activity-time">2 hours ago</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">📄</div>
+                    <div class="activity-content">
+                        <strong>12 products published</strong>
+                        <span class="activity-time">5 hours ago</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">⚠️</div>
+                    <div class="activity-content">
+                        <strong>5 products rejected - validation errors</strong>
+                        <span class="activity-time">5 hours ago</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">✓</div>
+                    <div class="activity-content">
+                        <strong>Account created</strong>
+                        <span class="activity-time">1 day ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 USOTG Sourcing Ltd.</p>
+        </div>
+    </footer>
+</body>
+</html>

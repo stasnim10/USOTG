@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - USOTG Sourcing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">USOTG Sourcing</a></div>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="catalog-upload.html">Catalog</a>
+                <a href="#">RFQs</a>
+                <a href="#">Orders</a>
+                <a href="analytics.html" class="active">Analytics</a>
+                <a href="profile-edit.html">Profile</a>
+                <a href="index.html">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="analytics-container">
+        <div class="analytics-header">
+            <h1>Performance Analytics</h1>
+            <div class="date-filter">
+                <select>
+                    <option value="7">Last 7 days</option>
+                    <option value="30" selected>Last 30 days</option>
+                    <option value="90">Last 90 days</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="metrics-grid">
+            <div class="metric-card primary">
+                <div class="metric-header">
+                    <h3>Profile Views</h3>
+                    <span class="trend positive">+12%</span>
+                </div>
+                <div class="metric-value">1,234</div>
+                <div class="metric-subtitle">vs. 1,102 last month</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <h3>Catalog Downloads</h3>
+                    <span class="trend positive">+8%</span>
+                </div>
+                <div class="metric-value">89</div>
+                <div class="metric-subtitle">vs. 82 last month</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <h3>RFQ Responses</h3>
+                    <span class="trend negative">-3%</span>
+                </div>
+                <div class="metric-value">23</div>
+                <div class="metric-subtitle">vs. 24 last month</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <h3>Response Rate</h3>
+                    <span class="trend positive">+5%</span>
+                </div>
+                <div class="metric-value">92%</div>
+                <div class="metric-subtitle">Industry avg: 78%</div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-section">
+            <div class="chart-card">
+                <h3>Profile Views Over Time</h3>
+                <div class="chart-placeholder">
+                    <div class="chart-bars">
+                        <div class="bar" style="height: 60%"></div>
+                        <div class="bar" style="height: 80%"></div>
+                        <div class="bar" style="height: 45%"></div>
+                        <div class="bar" style="height: 90%"></div>
+                        <div class="bar" style="height: 70%"></div>
+                        <div class="bar" style="height: 85%"></div>
+                        <div class="bar" style="height: 95%"></div>
+                    </div>
+                    <div class="chart-labels">
+                        <span>Week 1</span>
+                        <span>Week 2</span>
+                        <span>Week 3</span>
+                        <span>Week 4</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Top Performing Products</h3>
+                <div class="product-list">
+                    <div class="product-item">
+                        <span class="product-name">Premium Cotton Fabric</span>
+                        <span class="product-views">234 views</span>
+                    </div>
+                    <div class="product-item">
+                        <span class="product-name">Organic Denim</span>
+                        <span class="product-views">189 views</span>
+                    </div>
+                    <div class="product-item">
+                        <span class="product-name">Printed Cotton</span>
+                        <span class="product-views">156 views</span>
+                    </div>
+                    <div class="product-item">
+                        <span class="product-name">Canvas Fabric</span>
+                        <span class="product-views">134 views</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Insights & Recommendations -->
+        <div class="insights-section">
+            <h2>Insights & Recommendations</h2>
+            <div class="insights-grid">
+                <div class="insight-card positive">
+                    <div class="insight-icon">📈</div>
+                    <div class="insight-content">
+                        <h4>Profile Performance</h4>
+                        <p>Your profile views increased 12% this month. Keep updating your catalog to maintain momentum.</p>
+                        <a href="catalog-upload.html" class="insight-action">Add More Products</a>
+                    </div>
+                </div>
+
+                <div class="insight-card warning">
+                    <div class="insight-icon">⚠️</div>
+                    <div class="insight-content">
+                        <h4>Response Time</h4>
+                        <p>Your average RFQ response time is 18 hours. Faster responses (under 12 hours) get 40% more orders.</p>
+                        <a href="#" class="insight-action">Set Up Notifications</a>
+                    </div>
+                </div>
+
+                <div class="insight-card info">
+                    <div class="insight-icon">💡</div>
+                    <div class="insight-content">
+                        <h4>Catalog Optimization</h4>
+                        <p>Products with 5+ images get 60% more inquiries. Consider adding more photos to your top products.</p>
+                        <a href="catalog-upload.html" class="insight-action">Update Images</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity Log -->
+        <div class="activity-section">
+            <h2>Recent Activity</h2>
+            <div class="activity-log">
+                <div class="activity-item">
+                    <div class="activity-icon">👁️</div>
+                    <div class="activity-content">
+                        <strong>Profile viewed</strong> by buyer from New York
+                        <span class="activity-time">2 hours ago</span>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">📥</div>
+                    <div class="activity-content">
+                        <strong>RFQ received</strong> for Premium Cotton Fabric
+                        <span class="activity-time">5 hours ago</span>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">📄</div>
+                    <div class="activity-content">
+                        <strong>Catalog downloaded</strong> by textile manufacturer
+                        <span class="activity-time">1 day ago</span>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">✅</div>
+                    <div class="activity-content">
+                        <strong>Quote submitted</strong> for Organic Denim order
+                        <span class="activity-time">2 days ago</span>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">📦</div>
+                    <div class="activity-content">
+                        <strong>New products added</strong> - 15 items uploaded
+                        <span class="activity-time">3 days ago</span>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">🔍</div>
+                    <div class="activity-content">
+                        <strong>Search appearance</strong> in "cotton fabric" results
+                        <span class="activity-time">3 days ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitive Analysis -->
+        <div class="competitive-section">
+            <h2>Market Position</h2>
+            <div class="competitive-grid">
+                <div class="competitive-card">
+                    <h4>Industry Ranking</h4>
+                    <div class="ranking-display">
+                        <span class="rank-number">#12</span>
+                        <span class="rank-category">in Textile & Apparel</span>
+                    </div>
+                    <div class="rank-change positive">↑ 3 positions this month</div>
+                </div>
+
+                <div class="competitive-card">
+                    <h4>Profile Completeness</h4>
+                    <div class="completeness-bar">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="progress-text">85% complete</span>
+                    </div>
+                    <div class="completeness-tip">Add certifications to reach 100%</div>
+                </div>
+
+                <div class="competitive-card">
+                    <h4>Response Score</h4>
+                    <div class="score-display">
+                        <span class="score-number">4.8</span>
+                        <span class="score-max">/5.0</span>
+                    </div>
+                    <div class="score-feedback">Excellent response quality</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Export Options -->
+        <div class="export-section">
+            <h2>Export Data</h2>
+            <div class="export-options">
+                <button class="btn-secondary">📊 Export Analytics Report</button>
+                <button class="btn-secondary">📋 Download Activity Log</button>
+                <button class="btn-secondary">📈 Performance Summary</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple chart animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const bars = document.querySelectorAll('.bar');
+            bars.forEach((bar, index) => {
+                setTimeout(() => {
+                    bar.style.opacity = '1';
+                    bar.style.transform = 'scaleY(1)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>

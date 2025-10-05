@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog Upload - USOTG Sourcing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">USOTG Sourcing</a></div>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="catalog-upload.html" class="active">Catalog</a>
+                <a href="#">RFQs</a>
+                <a href="#">Orders</a>
+                <a href="analytics.html">Analytics</a>
+                <a href="profile-edit.html">Profile</a>
+                <a href="help-center.html">Help</a>
+                <a href="index.html">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="catalog-container">
+        <h1>Bulk Catalog Upload</h1>
+        <p class="subtitle">Upload hundreds of products at once using our CSV template</p>
+
+        <!-- Step 1: Download Template -->
+        <div class="upload-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h2>Download Template</h2>
+                <p>Use our pre-formatted CSV template with all required fields and examples</p>
+                <div class="template-actions">
+                    <button class="btn-primary" onclick="downloadTemplate()">
+                        <span>⬇️</span> Download CSV Template
+                    </button>
+                    <button class="btn-secondary" onclick="downloadSample()">
+                        <span>📋</span> Download Sample Data
+                    </button>
+                </div>
+                <div class="info-box">
+                    <strong>Template includes:</strong> SKU, Product Name, Description, Category, MOQ, Price, Currency, Lead Time, Images, Certifications
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Prepare Your Data -->
+        <div class="upload-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h2>Prepare Your Data</h2>
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <h3>Required Fields</h3>
+                        <ul>
+                            <li>SKU (unique)</li>
+                            <li>Product Name</li>
+                            <li>Category</li>
+                            <li>MOQ</li>
+                            <li>Price</li>
+                            <li>Currency</li>
+                            <li>Lead Time (days)</li>
+                        </ul>
+                    </div>
+                    <div class="requirement-card">
+                        <h3>Validation Rules</h3>
+                        <ul>
+                            <li>No duplicate SKUs</li>
+                            <li>Price must be numeric</li>
+                            <li>MOQ ≥ 1</li>
+                            <li>Lead time 1-365 days</li>
+                            <li>Category from dropdown</li>
+                        </ul>
+                    </div>
+                    <div class="requirement-card">
+                        <h3>Best Practices</h3>
+                        <ul>
+                            <li>Add product images (URLs)</li>
+                            <li>Write clear descriptions</li>
+                            <li>Include certifications</li>
+                            <li>Specify attributes</li>
+                            <li>Use sentence case</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Upload File -->
+        <div class="upload-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h2>Upload Your File</h2>
+                <div class="upload-zone" id="uploadZone">
+                    <div class="upload-icon">📤</div>
+                    <h3>Drag & drop your CSV or Excel file here</h3>
+                    <p>or click to browse</p>
+                    <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" hidden>
+                    <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+                        Choose File
+                    </button>
+                    <p class="hint">Supports CSV, XLSX, XLS (max 50MB, up to 10,000 rows)</p>
+                </div>
+
+                <div class="upload-progress hidden" id="uploadProgress">
+                    <h3>Uploading and validating...</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+                    </div>
+                    <p id="progressText">0% complete</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Review Results -->
+        <div class="upload-step hidden" id="resultsSection">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h2>Validation Results</h2>
+                
+                <div class="results-summary">
+                    <div class="result-stat success">
+                        <div class="stat-number" id="validCount">45</div>
+                        <div class="stat-label">Valid Products</div>
+                    </div>
+                    <div class="result-stat error">
+                        <div class="stat-number" id="errorCount">5</div>
+                        <div class="stat-label">Errors</div>
+                    </div>
+                    <div class="result-stat warning">
+                        <div class="stat-number" id="warningCount">8</div>
+                        <div class="stat-label">Warnings</div>
+                    </div>
+                </div>
+
+                <div class="error-list">
+                    <h3>Errors to Fix</h3>
+                    <div class="error-item">
+                        <div class="error-icon">❌</div>
+                        <div class="error-details">
+                            <strong>Row 12: Duplicate SKU</strong>
+                            <p>SKU "TEX-001" already exists. Each SKU must be unique.</p>
+                            <span class="error-field">Field: SKU</span>
+                        </div>
+                    </div>
+                    <div class="error-item">
+                        <div class="error-icon">❌</div>
+                        <div class="error-details">
+                            <strong>Row 23: Invalid price</strong>
+                            <p>Price must be a positive number. Found: "N/A"</p>
+                            <span class="error-field">Field: Price</span>
+                        </div>
+                    </div>
+                    <div class="error-item">
+                        <div class="error-icon">❌</div>
+                        <div class="error-details">
+                            <strong>Row 34: Missing required field</strong>
+                            <p>Product Name is required but empty.</p>
+                            <span class="error-field">Field: Product Name</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warning-list">
+                    <h3>Warnings (Optional)</h3>
+                    <div class="warning-item">
+                        <div class="warning-icon">⚠️</div>
+                        <div class="warning-details">
+                            <strong>8 products missing images</strong>
+                            <p>Products without images get 50% less views. Add image URLs to improve visibility.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn-secondary" onclick="downloadErrorReport()">
+                        <span>⬇️</span> Download Error Report
+                    </button>
+                    <button class="btn-tertiary" onclick="resetUpload()">Upload Different File</button>
+                    <button class="btn-primary" onclick="publishProducts()">
+                        Publish 45 Valid Products
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 USOTG Sourcing Ltd.</p>
+        </div>
+    </footer>
+
+    <script src="catalog.js"></script>
+</body>
+</html>

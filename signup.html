@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Registration - USOTG Sourcing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">USOTG Sourcing</a></div>
+        </div>
+    </nav>
+
+    <div class="wizard-container">
+        <div class="wizard-progress">
+            <div class="step active" data-step="1">
+                <div class="step-number">1</div>
+                <div class="step-label">Account</div>
+            </div>
+            <div class="step" data-step="2">
+                <div class="step-number">2</div>
+                <div class="step-label">Business Profile</div>
+            </div>
+            <div class="step" data-step="3">
+                <div class="step-number">3</div>
+                <div class="step-label">Verification</div>
+            </div>
+            <div class="step" data-step="4">
+                <div class="step-number">4</div>
+                <div class="step-label">Catalog</div>
+            </div>
+        </div>
+
+        <div class="wizard-content">
+            <!-- Step 1: Account Creation -->
+            <div class="wizard-step active" id="step1">
+                <h2>Create Your Account</h2>
+                <p class="subtitle">Start selling to U.S. buyers in minutes</p>
+                
+                <form id="accountForm">
+                    <div class="form-group">
+                        <label for="companyName">Legal Company Name *</label>
+                        <input type="text" id="companyName" required placeholder="e.g., ABC Textiles Ltd.">
+                        <span class="hint">Must match your trade license</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Business Email *</label>
+                        <input type="email" id="email" required placeholder="contact@yourcompany.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" required minlength="8">
+                        <span class="hint">At least 8 characters</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <select id="country" required>
+                            <option value="">Select country</option>
+                            <option value="BD" selected>Bangladesh</option>
+                            <option value="IN">India</option>
+                            <option value="PK">Pakistan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-primary" onclick="nextStep(2)">Continue</button>
+                    </div>
+                    <p class="form-footer">Already have an account? <a href="login.html">Login</a></p>
+                </form>
+            </div>
+
+            <!-- Step 2: Business Profile -->
+            <div class="wizard-step" id="step2">
+                <h2>Business Profile</h2>
+                <p class="subtitle">Help buyers understand your capabilities</p>
+
+                <form id="profileForm">
+                    <div class="form-group">
+                        <label for="address">Registered Address *</label>
+                        <textarea id="address" required rows="3" placeholder="Street address, city, postal code"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required placeholder="+880 1XXX-XXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website</label>
+                            <input type="url" id="website" placeholder="https://yourcompany.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="businessType">Business Type *</label>
+                        <select id="businessType" required>
+                            <option value="">Select type</option>
+                            <option value="manufacturer">Manufacturer</option>
+                            <option value="trader">Trading Company</option>
+                            <option value="both">Manufacturer & Trader</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categories">Primary Product Categories *</label>
+                        <select id="categories" multiple required size="5">
+                            <option value="textiles">Textiles & Apparel</option>
+                            <option value="leather">Leather Goods</option>
+                            <option value="jute">Jute Products</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="furniture">Furniture</option>
+                            <option value="food">Food & Beverage</option>
+                            <option value="handicrafts">Handicrafts</option>
+                        </select>
+                        <span class="hint">Hold Ctrl/Cmd to select multiple</span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="prevStep(1)">Back</button>
+                        <button type="button" class="btn-primary" onclick="nextStep(3)">Continue</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 3: Compliance Vault -->
+            <div class="wizard-step" id="step3">
+                <h2>Verification Documents</h2>
+                <p class="subtitle">Optional now, required before receiving orders</p>
+
+                <div class="info-box">
+                    <strong>⚡ Fast-track tip:</strong> Upload documents now to get verified in 24 hours and earn a Fast-Track badge
+                </div>
+
+                <form id="verificationForm">
+                    <div class="upload-group">
+                        <label>Trade License</label>
+                        <div class="upload-box" onclick="document.getElementById('tradeLicense').click()">
+                            <div class="upload-icon">📄</div>
+                            <p>Drag & drop or click to upload</p>
+                            <span class="hint">PDF, JPG, PNG (max 5MB)</span>
+                        </div>
+                        <input type="file" id="tradeLicense" accept=".pdf,.jpg,.jpeg,.png" hidden>
+                    </div>
+
+                    <div class="upload-group">
+                        <label>Tax ID / TIN Certificate</label>
+                        <div class="upload-box" onclick="document.getElementById('taxId').click()">
+                            <div class="upload-icon">📄</div>
+                            <p>Drag & drop or click to upload</p>
+                            <span class="hint">PDF, JPG, PNG (max 5MB)</span>
+                        </div>
+                        <input type="file" id="taxId" accept=".pdf,.jpg,.jpeg,.png" hidden>
+                    </div>
+
+                    <div class="upload-group">
+                        <label>Certifications (ISO, WRAP, etc.)</label>
+                        <div class="upload-box" onclick="document.getElementById('certs').click()">
+                            <div class="upload-icon">📄</div>
+                            <p>Drag & drop or click to upload</p>
+                            <span class="hint">Multiple files allowed</span>
+                        </div>
+                        <input type="file" id="certs" accept=".pdf,.jpg,.jpeg,.png" multiple hidden>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="prevStep(2)">Back</button>
+                        <button type="button" class="btn-tertiary" onclick="nextStep(4)">Skip for Now</button>
+                        <button type="button" class="btn-primary" onclick="nextStep(4)">Continue</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 4: Catalog Quick Start -->
+            <div class="wizard-step" id="step4">
+                <h2>Add Your First Products</h2>
+                <p class="subtitle">Choose how you want to build your catalog</p>
+
+                <div class="catalog-options">
+                    <div class="option-card" onclick="window.location.href='catalog-upload.html'">
+                        <div class="option-icon">📊</div>
+                        <h3>Bulk Upload (CSV/Excel)</h3>
+                        <p>Upload hundreds of products at once</p>
+                        <ul>
+                            <li>Download our template</li>
+                            <li>Fill in your product data</li>
+                            <li>Upload and validate</li>
+                        </ul>
+                        <button class="btn-primary">Use Bulk Upload</button>
+                    </div>
+
+                    <div class="option-card" onclick="window.location.href='product-add.html'">
+                        <div class="option-icon">➕</div>
+                        <h3>Add Single Product</h3>
+                        <p>Start with one product manually</p>
+                        <ul>
+                            <li>Simple guided form</li>
+                            <li>Add images and details</li>
+                            <li>Publish immediately</li>
+                        </ul>
+                        <button class="btn-secondary">Add One Product</button>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-tertiary" onclick="window.location.href='dashboard.html'">Skip, I'll do this later</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="wizard.js"></script>
+</body>
+</html>

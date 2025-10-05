@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USOTG Sourcing - Connecting Bangladesh's Best Industries to Global Markets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">USOTG Sourcing</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#industries">Industries</a>
+                <a href="signup.html">Supplier Registration</a>
+                <a href="#contact">Contact</a>
+                <a href="login.html" class="btn-nav">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-modern" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Connecting Bangladesh's Best Industries to Global Markets</h1>
+                <p class="hero-subtitle">Trusted supplier onboarding, easy catalog uploads, and secure market access connecting Bangladeshi manufacturers with USA buyers and investors.</p>
+                <div class="hero-buttons">
+                    <a href="#industries" class="btn-primary btn-large">Explore Industries</a>
+                    <a href="signup.html" class="btn-secondary btn-large">Supplier Registration</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800" alt="Global Trade" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About USOTG Sourcing</h2>
+                <p class="about-intro">USOTG Sourcing makes it effortless for manufacturers to join our platform, list products, and reach buyers worldwide. We guide suppliers through fast onboarding using automated verification and simple catalog uploads.</p>
+                
+                <div class="onboarding-steps">
+                    <h3>How Onboarding Works</h3>
+                    <div class="steps-grid">
+                        <div class="step-item">
+                            <div class="step-icon">1</div>
+                            <h4>Register</h4>
+                            <p>Create your account with basic company information</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">2</div>
+                            <h4>Verify</h4>
+                            <p>Submit business details and documents for automated KYB verification</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">3</div>
+                            <h4>Upload Products</h4>
+                            <p>Add your catalog via CSV or manual entry with our guided tools</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">4</div>
+                            <h4>Go Live</h4>
+                            <p>Get approved and start connecting with global buyers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-register">
+                    <a href="signup.html" class="btn-primary btn-large">Start Your Registration</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section" id="industries">
+        <div class="container">
+            <h2>Explore Industries</h2>
+            <p class="section-subtitle">Discover verified suppliers across Bangladesh's strongest export sectors</p>
+            
+            <div class="industry-grid">
+                <div class="industry-card" onclick="window.location.href='suppliers.html?industry=textile'">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="64" height="64" rx="12" fill="url(#gradient1)"/>
+                            <path d="M20 24h24M20 32h24M20 40h24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="gradient1" x1="0" y1="0" x2="64" y2="64">
+                                    <stop stop-color="#667eea"/>
+                                    <stop offset="1" stop-color="#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Textile & Apparel</h3>
+                    <p>Ready-made garments, fabrics, and textile products</p>
+                </div>
+
+                <div class="industry-card" onclick="window.location.href='suppliers.html?industry=food'">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="64" height="64" rx="12" fill="url(#gradient2)"/>
+                            <circle cx="32" cy="28" r="8" stroke="white" stroke-width="3"/>
+                            <path d="M24 36c0-4 3.5-8 8-8s8 4 8 8" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0" y1="0" x2="64" y2="64">
+                                    <stop stop-color="#f093fb"/>
+                                    <stop offset="1" stop-color="#f5576c"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Food Processing</h3>
+                    <p>Processed foods, seafood, and agricultural products</p>
+                </div>
+
+                <div class="industry-card" onclick="window.location.href='suppliers.html?industry=leather'">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="64" height="64" rx="12" fill="url(#gradient3)"/>
+                            <rect x="20" y="24" width="24" height="16" rx="2" stroke="white" stroke-width="3"/>
+                            <path d="M28 24v-4M36 24v-4" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="gradient3" x1="0" y1="0" x2="64" y2="64">
+                                    <stop stop-color="#4facfe"/>
+                                    <stop offset="1" stop-color="#00f2fe"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Leather Goods</h3>
+                    <p>Footwear, bags, and leather accessories</p>
+                </div>
+
+                <div class="industry-card" onclick="window.location.href='suppliers.html?industry=pharma'">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="64" height="64" rx="12" fill="url(#gradient4)"/>
+                            <path d="M32 20v24M20 32h24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="gradient4" x1="0" y1="0" x2="64" y2="64">
+                                    <stop stop-color="#43e97b"/>
+                                    <stop offset="1" stop-color="#38f9d7"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Pharmaceuticals</h3>
+                    <p>Generic medicines and healthcare products</p>
+                </div>
+
+                <div class="industry-card" onclick="window.location.href='suppliers.html?industry=electronics'">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="64" height="64" rx="12" fill="url(#gradient5)"/>
+                            <rect x="18" y="22" width="28" height="20" rx="2" stroke="white" stroke-width="3"/>
+                            <circle cx="32" cy="32" r="4" fill="white"/>
+                            <defs>
+                                <linearGradient id="gradient5" x1="0" y1="0" x2="64" y2="64">
+                                    <stop stop-color="#fa709a"/>
+                                    <stop offset="1" stop-color="#fee140"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Electronics</h3>
+                    <p>Consumer electronics and components</p>
+                </div>
+
+                <div class="industry-card" onclick="window.location.href='suppliers.html?industry=chemicals'">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="64" height="64" rx="12" fill="url(#gradient6)"/>
+                            <path d="M28 24l4 8l4-8M24 40h16" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="32" cy="36" r="6" stroke="white" stroke-width="3"/>
+                            <defs>
+                                <linearGradient id="gradient6" x1="0" y1="0" x2="64" y2="64">
+                                    <stop stop-color="#30cfd0"/>
+                                    <stop offset="1" stop-color="#330867"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Chemicals</h3>
+                    <p>Industrial chemicals and raw materials</p>
+                </div>
+
+                <div class="industry-card" onclick="window.location.href='suppliers.html?industry=agriculture'">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="64" height="64" rx="12" fill="url(#gradient7)"/>
+                            <path d="M32 20v24M26 26c0 3 2 6 6 6M38 26c0 3-2 6-6 6" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="gradient7" x1="0" y1="0" x2="64" y2="64">
+                                    <stop stop-color="#a8edea"/>
+                                    <stop offset="1" stop-color="#fed6e3"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Agriculture</h3>
+                    <p>Agricultural products and organic goods</p>
+                </div>
+
+                <div class="industry-card" onclick="window.location.href='suppliers.html?industry=jute'">
+                    <div class="industry-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="64" height="64" rx="12" fill="url(#gradient8)"/>
+                            <path d="M24 28h16M24 32h16M24 36h16" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="gradient8" x1="0" y1="0" x2="64" y2="64">
+                                    <stop stop-color="#ff9a9e"/>
+                                    <stop offset="1" stop-color="#fecfef"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Jute Products</h3>
+                    <p>Eco-friendly jute bags and handicrafts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Have questions? We're here to help suppliers and buyers connect seamlessly.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong> info@usotgsourcing.com
+                </div>
+                <div class="contact-item">
+                    <strong>Phone:</strong> +880 1XXX-XXXXXX
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>USOTG Sourcing</h3>
+                    <p>Connecting Bangladesh to global markets</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#industries">Industries</a>
+                    <a href="signup.html">Register</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 USOTG Sourcing Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

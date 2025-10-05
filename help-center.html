@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - USOTG Sourcing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">USOTG Sourcing</a></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="help-center.html" class="active">Help</a>
+                <a href="login.html" class="btn-nav">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="help-container">
+        <div class="help-header">
+            <h1>Help Center</h1>
+            <p>Get the support you need to succeed on USOTG Sourcing</p>
+            <div class="help-search">
+                <input type="text" placeholder="Search for help articles..." class="search-input">
+                <button class="btn-primary">Search</button>
+            </div>
+        </div>
+
+        <div class="help-layout">
+            <!-- Quick Actions -->
+            <div class="help-actions">
+                <div class="action-card">
+                    <h3>🚀 Getting Started</h3>
+                    <p>New to USOTG? Start here</p>
+                    <a href="#onboarding" class="btn-secondary">View Guide</a>
+                </div>
+                <div class="action-card">
+                    <h3>💬 Live Chat</h3>
+                    <p>Chat with our support team</p>
+                    <button class="btn-primary" onclick="openChat()">Start Chat</button>
+                </div>
+                <div class="action-card">
+                    <h3>📧 Contact Us</h3>
+                    <p>Send us a message</p>
+                    <a href="#contact" class="btn-secondary">Contact Form</a>
+                </div>
+            </div>
+
+            <!-- Help Categories -->
+            <div class="help-categories">
+                <div class="category-section" id="onboarding">
+                    <h2>🚀 Getting Started</h2>
+                    <div class="help-articles">
+                        <div class="article-card">
+                            <h4>Complete Your Registration</h4>
+                            <p>Step-by-step guide to setting up your supplier account</p>
+                            <div class="article-steps">
+                                <div class="step">1. Create account with email and password</div>
+                                <div class="step">2. Add business profile and contact details</div>
+                                <div class="step">3. Upload verification documents</div>
+                                <div class="step">4. Add your first products to catalog</div>
+                            </div>
+                            <a href="#" class="article-link">Read full guide →</a>
+                        </div>
+                        
+                        <div class="article-card">
+                            <h4>Profile Verification Process</h4>
+                            <p>What documents you need and how verification works</p>
+                            <ul>
+                                <li>Trade license or business registration</li>
+                                <li>Tax identification certificate</li>
+                                <li>Bank account verification</li>
+                                <li>Quality certifications (optional)</li>
+                            </ul>
+                            <div class="info-box">
+                                <strong>Verification typically takes 12-24 hours</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-section">
+                    <h2>📦 Catalog Management</h2>
+                    <div class="help-articles">
+                        <div class="article-card">
+                            <h4>Bulk Product Upload</h4>
+                            <p>Upload hundreds of products using our CSV template</p>
+                            <div class="article-steps">
+                                <div class="step">1. Download CSV template</div>
+                                <div class="step">2. Fill in product details</div>
+                                <div class="step">3. Upload and validate</div>
+                                <div class="step">4. Fix any errors</div>
+                                <div class="step">5. Publish products</div>
+                            </div>
+                            <div class="download-links">
+                                <a href="#" class="btn-secondary btn-small">📄 Download Template</a>
+                                <a href="#" class="btn-tertiary btn-small">📋 Sample Data</a>
+                            </div>
+                        </div>
+
+                        <div class="article-card">
+                            <h4>Product Image Guidelines</h4>
+                            <p>Best practices for product photos</p>
+                            <ul>
+                                <li>High resolution (min 800x800px)</li>
+                                <li>White or neutral background</li>
+                                <li>Multiple angles and close-ups</li>
+                                <li>JPG or PNG format</li>
+                                <li>Max 5MB per image</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-section">
+                    <h2>🔒 Compliance & Verification</h2>
+                    <div class="help-articles">
+                        <div class="article-card">
+                            <h4>Required Documents Checklist</h4>
+                            <div class="checklist">
+                                <div class="checklist-item">
+                                    <input type="checkbox" checked disabled>
+                                    <span>Business registration/Trade license</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" checked disabled>
+                                    <span>Tax identification certificate</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" disabled>
+                                    <span>Export license (if applicable)</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" disabled>
+                                    <span>Quality certifications (ISO, WRAP, etc.)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-card">
+                            <h4>Document Expiry Alerts</h4>
+                            <p>We'll notify you 30 days before documents expire</p>
+                            <div class="alert-info">
+                                <strong>Pro tip:</strong> Upload renewed documents early to avoid account restrictions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-section">
+                    <h2>💼 Orders & RFQs</h2>
+                    <div class="help-articles">
+                        <div class="article-card">
+                            <h4>Responding to RFQs</h4>
+                            <p>How to handle buyer inquiries effectively</p>
+                            <div class="article-steps">
+                                <div class="step">1. Respond within 24 hours</div>
+                                <div class="step">2. Provide detailed quotations</div>
+                                <div class="step">3. Include samples if requested</div>
+                                <div class="step">4. Follow up professionally</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>❓ Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            How long does verification take?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Verification typically takes 12-24 hours for standard documents. Complex cases may take up to 3 business days.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            Can I edit my products after uploading?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, you can edit product details, prices, and images anytime from your catalog management page.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            What file formats are supported for documents?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We accept PDF, JPG, PNG files up to 10MB each. Documents should be clear and readable.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            How do I update my company information?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Go to your Profile page and click "Edit Profile" to update company details, contact information, and business categories.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section" id="contact">
+                <h2>📧 Still Need Help?</h2>
+                <div class="contact-options">
+                    <div class="contact-card">
+                        <h4>Email Support</h4>
+                        <p>Get help via email</p>
+                        <a href="mailto:support@usotg.gov" class="btn-secondary">support@usotg.gov</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h4>Phone Support</h4>
+                        <p>Call us during business hours</p>
+                        <a href="tel:+1-800-USOTG-01" class="btn-secondary">+1-800-USOTG-01</a>
+                        <small>Mon-Fri 9AM-6PM EST</small>
+                    </div>
+
+                    <div class="contact-card">
+                        <h4>Submit a Ticket</h4>
+                        <form class="contact-form">
+                            <select required>
+                                <option value="">Select Issue Type</option>
+                                <option value="verification">Verification Problem</option>
+                                <option value="catalog">Catalog Upload Issue</option>
+                                <option value="profile">Profile Update</option>
+                                <option value="technical">Technical Problem</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <textarea placeholder="Describe your issue..." rows="4" required></textarea>
+                            <button type="submit" class="btn-primary">Submit Ticket</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <span>💬 Support Chat</span>
+            <button onclick="closeChat()">×</button>
+        </div>
+        <div class="chat-messages">
+            <div class="chat-message bot">
+                <span>Hi! How can I help you today?</span>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message...">
+            <button>Send</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                toggle.textContent = '+';
+            } else {
+                answer.style.display = 'block';
+                toggle.textContent = '−';
+            }
+        }
+
+        function openChat() {
+            document.getElementById('chatWidget').style.display = 'block';
+        }
+
+        function closeChat() {
+            document.getElementById('chatWidget').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textile Suppliers - USOTG Sourcing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">USOTG Sourcing</a></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#industries">Industries</a>
+                <a href="signup.html">Supplier Registration</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="login.html" class="btn-nav">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="directory-container">
+        <div class="directory-header">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <a href="index.html#industries">Industries</a> / <span>Textile & Apparel</span>
+            </div>
+            <h1>Textile & Apparel Suppliers</h1>
+            <p class="directory-subtitle">42 verified suppliers ready to connect</p>
+        </div>
+
+        <div class="directory-layout">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <div class="filter-section">
+                    <h3>Search</h3>
+                    <input type="text" class="search-input" placeholder="Search suppliers, products...">
+                </div>
+
+                <div class="filter-section">
+                    <h3>Certifications</h3>
+                    <label class="filter-checkbox">
+                        <input type="checkbox"> ISO 9001
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox"> WRAP
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox"> OEKO-TEX
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox"> GOTS
+                    </label>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Location</h3>
+                    <label class="filter-checkbox">
+                        <input type="checkbox"> Dhaka
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox"> Chittagong
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox"> Gazipur
+                    </label>
+                </div>
+
+                <div class="filter-section">
+                    <h3>MOQ Range</h3>
+                    <select class="filter-select">
+                        <option>Any</option>
+                        <option>Under 500 units</option>
+                        <option>500-1000 units</option>
+                        <option>1000-5000 units</option>
+                        <option>5000+ units</option>
+                    </select>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Lead Time</h3>
+                    <select class="filter-select">
+                        <option>Any</option>
+                        <option>Under 30 days</option>
+                        <option>30-60 days</option>
+                        <option>60-90 days</option>
+                    </select>
+                </div>
+
+                <button class="btn-secondary" style="width: 100%; margin-top: 1rem;">Clear Filters</button>
+            </aside>
+
+            <!-- Supplier Grid -->
+            <div class="suppliers-main">
+                <div class="directory-controls">
+                    <div class="view-toggle">
+                        <button class="view-btn active">Grid</button>
+                        <button class="view-btn">List</button>
+                    </div>
+                    <select class="sort-select">
+                        <option>Best Match</option>
+                        <option>Newest First</option>
+                        <option>Highest Rated</option>
+                        <option>Most Active</option>
+                    </select>
+                </div>
+
+                <div class="supplier-grid">
+                    <!-- Supplier Card 1 -->
+                    <div class="supplier-card" onclick="window.location.href='supplier-detail.html'">
+                        <div class="supplier-badges">
+                            <span class="badge verified">✓ Verified</span>
+                            <span class="badge fast-track">⚡ Fast-Track</span>
+                        </div>
+                        <div class="supplier-logo">
+                            <img src="https://via.placeholder.com/100x100/667eea/ffffff?text=ABC" alt="ABC Textiles">
+                        </div>
+                        <h3>ABC Textiles Ltd.</h3>
+                        <p class="supplier-tagline">Premium RMG Manufacturer & Exporter</p>
+                        <div class="supplier-location">📍 Dhaka, Bangladesh</div>
+                        
+                        <div class="supplier-certs">
+                            <span class="cert-badge">ISO 9001</span>
+                            <span class="cert-badge">WRAP</span>
+                            <span class="cert-badge">OEKO-TEX</span>
+                        </div>
+
+                        <div class="supplier-products">
+                            <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=100&h=100&fit=crop" alt="Product">
+                            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=100&h=100&fit=crop" alt="Product">
+                            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=100&h=100&fit=crop" alt="Product">
+                        </div>
+
+                        <div class="supplier-stats">
+                            <div class="stat-item">
+                                <strong>15+</strong>
+                                <span>Years</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>500</strong>
+                                <span>MOQ</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>45d</strong>
+                                <span>Lead Time</span>
+                            </div>
+                        </div>
+
+                        <div class="supplier-actions">
+                            <button class="btn-primary btn-small" onclick="event.stopPropagation(); alert('View Details')">View Details</button>
+                            <button class="btn-secondary btn-small" onclick="event.stopPropagation(); alert('Send RFQ')">Send RFQ</button>
+                        </div>
+                    </div>
+
+                    <!-- Supplier Card 2 -->
+                    <div class="supplier-card">
+                        <div class="supplier-badges">
+                            <span class="badge verified">✓ Verified</span>
+                            <span class="badge top">⭐ Top Exporter</span>
+                        </div>
+                        <div class="supplier-logo">
+                            <img src="https://via.placeholder.com/100x100/f093fb/ffffff?text=XYZ" alt="XYZ Garments">
+                        </div>
+                        <h3>XYZ Garments Ltd.</h3>
+                        <p class="supplier-tagline">Sustainable Fashion & Knitwear Specialist</p>
+                        <div class="supplier-location">📍 Gazipur, Bangladesh</div>
+                        
+                        <div class="supplier-certs">
+                            <span class="cert-badge">ISO 9001</span>
+                            <span class="cert-badge">GOTS</span>
+                        </div>
+
+                        <div class="supplier-products">
+                            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=100&h=100&fit=crop" alt="Product">
+                            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=100&h=100&fit=crop" alt="Product">
+                            <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=100&h=100&fit=crop" alt="Product">
+                        </div>
+
+                        <div class="supplier-stats">
+                            <div class="stat-item">
+                                <strong>20+</strong>
+                                <span>Years</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>1000</strong>
+                                <span>MOQ</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>60d</strong>
+                                <span>Lead Time</span>
+                            </div>
+                        </div>
+
+                        <div class="supplier-actions">
+                            <button class="btn-primary btn-small">View Details</button>
+                            <button class="btn-secondary btn-small">Send RFQ</button>
+                        </div>
+                    </div>
+
+                    <!-- Supplier Card 3 -->
+                    <div class="supplier-card">
+                        <div class="supplier-badges">
+                            <span class="badge verified">✓ Verified</span>
+                            <span class="badge new">🆕 New</span>
+                        </div>
+                        <div class="supplier-logo">
+                            <img src="https://via.placeholder.com/100x100/4facfe/ffffff?text=DEF" alt="DEF Apparel">
+                        </div>
+                        <h3>DEF Apparel Industries</h3>
+                        <p class="supplier-tagline">Custom Workwear & Uniforms</p>
+                        <div class="supplier-location">📍 Chittagong, Bangladesh</div>
+                        
+                        <div class="supplier-certs">
+                            <span class="cert-badge">ISO 9001</span>
+                            <span class="cert-badge">WRAP</span>
+                        </div>
+
+                        <div class="supplier-products">
+                            <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=100&h=100&fit=crop" alt="Product">
+                            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=100&h=100&fit=crop" alt="Product">
+                            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=100&h=100&fit=crop" alt="Product">
+                        </div>
+
+                        <div class="supplier-stats">
+                            <div class="stat-item">
+                                <strong>8+</strong>
+                                <span>Years</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>300</strong>
+                                <span>MOQ</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>30d</strong>
+                                <span>Lead Time</span>
+                            </div>
+                        </div>
+
+                        <div class="supplier-actions">
+                            <button class="btn-primary btn-small">View Details</button>
+                            <button class="btn-secondary btn-small">Send RFQ</button>
+                        </div>
+                    </div>
+
+                    <!-- More cards would repeat here -->
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn">Previous</button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>USOTG Sourcing</h3>
+                    <p>Connecting Bangladesh to global markets</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#industries">Industries</a>
+                    <a href="signup.html">Register</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 USOTG Sourcing Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
